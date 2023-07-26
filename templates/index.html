@@ -1,0 +1,38 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    {% block content %}
+    <header>
+        <div class"jumbotron text-center">
+            <h1> My First Web Page </h1>
+        </div>
+    </header>
+
+    <div class="container">
+      <h2>Basic Table</h2>
+      <p>
+        The .table class adds basic styling (light padding and only horizontal
+        dividers) to a table:
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Gender</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+          <tr>
+            <td>{{ user['first_name'] }}</td>
+            <td>{{ user['first_name'] }}</td>
+            <td>{{ user['first_name'] }}</td>
+            <td>{{ user['first_name'] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endblock %} 
